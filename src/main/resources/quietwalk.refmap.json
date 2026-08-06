@@ -10,6 +10,9 @@
         "com/quietwalk/mod/mixin/MixinLocalPlayer": {
             "aiStep": "m_8107_",
             "Lnet/minecraft/client/player/Input;tick(ZF)V": "Lnet/minecraft/client/player/Input;m_214106_(ZF)V"
+        },
+        "com/quietwalk/mod/mixin/MixinDisableSprint": {
+            "setSprinting": "m_6858_"
         }
     },
     "data": {
@@ -24,6 +27,9 @@
             "com/quietwalk/mod/mixin/MixinLocalPlayer": {
                 "aiStep": "m_8107_",
                 "Lnet/minecraft/client/player/Input;tick(ZF)V": "Lnet/minecraft/client/player/Input;m_214106_(ZF)V"
+            },
+            "com/quietwalk/mod/mixin/MixinDisableSprint": {
+                "setSprinting": "m_6858_"
             }
         }
     }
