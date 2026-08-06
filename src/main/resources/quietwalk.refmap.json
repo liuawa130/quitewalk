@@ -1,0 +1,30 @@
+{
+    "mappings": {
+        "com/quietwalk/mod/mixin/MixinEntityStepSound": {
+            "playStepSound": "m_7355_"
+        },
+        "com/quietwalk/mod/mixin/MixinProjectile": {
+            "shootFromRotation": "m_37251_",
+            "Lnet/minecraft/world/entity/projectile/Projectile;shoot(DDDFF)V": "Lnet/minecraft/world/entity/projectile/Projectile;m_6686_(DDDFF)V"
+        },
+        "com/quietwalk/mod/mixin/MixinLocalPlayer": {
+            "aiStep": "m_8107_",
+            "Lnet/minecraft/client/player/Input;tick(ZF)V": "Lnet/minecraft/client/player/Input;m_214106_(ZF)V"
+        }
+    },
+    "data": {
+        "searge": {
+            "com/quietwalk/mod/mixin/MixinEntityStepSound": {
+                "playStepSound": "m_7355_"
+            },
+            "com/quietwalk/mod/mixin/MixinProjectile": {
+                "shootFromRotation": "m_37251_",
+                "Lnet/minecraft/world/entity/projectile/Projectile;shoot(DDDFF)V": "Lnet/minecraft/world/entity/projectile/Projectile;m_6686_(DDDFF)V"
+            },
+            "com/quietwalk/mod/mixin/MixinLocalPlayer": {
+                "aiStep": "m_8107_",
+                "Lnet/minecraft/client/player/Input;tick(ZF)V": "Lnet/minecraft/client/player/Input;m_214106_(ZF)V"
+            }
+        }
+    }
+}

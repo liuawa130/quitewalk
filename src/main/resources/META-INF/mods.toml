@@ -1,0 +1,54 @@
+modLoader="javafml"
+loaderVersion="${forge_version_range}"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="${mod_authors}"
+description='''
+${mod_description}
+
+Sprint is completely disabled.
+Normal walk speed matches CS2 running speed (1.3x vanilla walk).
+Press and hold Left Control (Ctrl) to walk quietly at CS2 silent walk speed (52% of running speed).
+Sneaking (Shift) moves at CS2 crouch speed (34% of running speed).
+
+Footstep sounds are completely silenced while quiet walking and sneaking.
+
+Sneaking keeps the TaCZ gun pose straight (no tilt).
+Sneaking also improves TaCZ gun accuracy: both hipfire and aimed spread
+are reduced by a configurable factor (default 50% less spread).
+Works with or without TaCZ installed (accuracy boost and gun pose only apply if TaCZ is present).
+
+All settings are configurable in quietwalk-client.toml.
+'''
+
+[[dependencies.${mod_id}]]
+    modId="forge"
+    mandatory=true
+    versionRange="${forge_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="tacz"
+    mandatory=false
+    versionRange="[1.1.0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="presencefootsteps"
+    mandatory=false
+    versionRange="[1.9.0,)"
+    ordering="AFTER"
+    side="CLIENT"

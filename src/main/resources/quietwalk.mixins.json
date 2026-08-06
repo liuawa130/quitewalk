@@ -1,0 +1,17 @@
+{
+    "required": true,
+    "minVersion": "0.8",
+    "package": "com.quietwalk.mod.mixin",
+    "compatibilityLevel": "JAVA_17",
+    "refmap": "quietwalk.refmap.json",
+    "client": [
+        "MixinLocalPlayer"
+    ],
+    "mixins": [
+        "MixinEntityStepSound",
+        "MixinProjectile"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}
