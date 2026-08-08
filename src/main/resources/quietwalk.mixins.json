@@ -5,7 +5,8 @@
     "compatibilityLevel": "JAVA_17",
     "refmap": "quietwalk.refmap.json",
     "client": [
-        "MixinLocalPlayer"
+        "MixinLocalPlayer",
+        "MixinGameRenderer"
     ],
     "mixins": [
         "MixinDisableSprint",

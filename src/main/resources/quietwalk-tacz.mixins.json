@@ -3,7 +3,7 @@
     "minVersion": "0.8",
     "package": "com.quietwalk.mod.mixin",
     "compatibilityLevel": "JAVA_17",
-    "mixins": [
+    "client": [
         "MixinTaczGunPose"
     ],
     "injectors": {

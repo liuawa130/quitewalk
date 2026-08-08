@@ -22,7 +22,7 @@ Sneaking also improves TaCZ gun accuracy: both hipfire and aimed spread
 are reduced by a configurable factor (default 50% less spread).
 Works with or without TaCZ installed (accuracy boost and gun pose only apply if TaCZ is present).
 
-All settings are configurable in quietwalk-client.toml.
+All settings are configurable in quietwalk-common.toml.
 '''
 
 [[dependencies.${mod_id}]]
