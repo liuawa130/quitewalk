@@ -20,10 +20,13 @@ public class QuietWalkMod {
 
     public QuietWalkMod() {
         var bus = FMLJavaModLoadingContext.get().getModEventBus();
-        bus.addListener((FMLCommonSetupEvent e) -> e.enqueueWork(() ->
-            LOGGER.info("[Quiet Walk] v1.5.1 loaded - sprint disabled, walk=CS2 run, Ctrl=CS2 silent walk, Shift=CS2 crouch, gun pose kept straight (TaCZ: {})",
-                ModList.get().isLoaded("tacz") ? "found" : "not found")));
+        bus.addListener((FMLCommonSetupEvent e) -> e.enqueueWork(() -> {
+            QuietWalkNetwork.register();
+            LOGGER.info("[Quiet Walk] v1.5.3 loaded - sprint disabled, walk=CS2 run, Ctrl=CS2 silent walk, Shift=CS2 crouch, gun pose kept straight (TaCZ: {})",
+                ModList.get().isLoaded("tacz") ? "found" : "not found");
+        }));
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, QuietWalkConfig.SPEC);
+        MinecraftForge.EVENT_BUS.register(new ServerWalkHandler());
         if (FMLEnvironment.dist == Dist.CLIENT)
             MinecraftForge.EVENT_BUS.register(new QuietWalkHandler());
     }

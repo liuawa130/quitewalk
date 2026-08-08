@@ -2,19 +2,22 @@ package com.quietwalk.mod;
 
 import com.quietwalk.mod.config.QuietWalkConfig;
 import net.minecraft.world.entity.LivingEntity;
+
+import java.util.Set;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 public final class QuietWalkState {
 
-    private static volatile UUID quietWalkerId = null;
+    private static final Set<UUID> quietWalkers = ConcurrentHashMap.newKeySet();
 
     public static void setQuietWalking(UUID playerId, boolean walking) {
-        quietWalkerId = walking ? playerId : null;
+        if (walking) quietWalkers.add(playerId);
+        else quietWalkers.remove(playerId);
     }
 
     public static boolean isQuietWalking(UUID entityId) {
-        UUID id = quietWalkerId;
-        return id != null && id.equals(entityId);
+        return quietWalkers.contains(entityId);
     }
 
     public static boolean shouldSilence(LivingEntity entity) {
